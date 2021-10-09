@@ -1,0 +1,39 @@
+.sidebar{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    padding: 20px 20px 50px 0px;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    
+    gap: 20px;
+    background-color:  #f4f4f4;
+    box-shadow:  rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    z-index: 1;
+    .icon{
+        display: flex;
+        width: 80px;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover{
+            background-color: #0CB459 ;
+        }
+        &:visited{
+            background-color: #0CB459 ;
+        }
+        border-radius: 3px;
+    }
+    .exit{
+        display: flex;
+        width: 80px;
+        height: 60px;
+        justify-content: center;
+        align-items: end;
+        cursor: pointer;
+        flex-grow: 1;
+
+    }
+}
