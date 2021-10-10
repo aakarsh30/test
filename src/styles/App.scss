@@ -4,10 +4,10 @@
     padding: 5px;
     border-radius: 5px;
     background-color:$bgclr;
-    max-height: 50px;
-    min-width: 60px;
-    min-height: 50px;
-    max-width: 60px;
+    
+    width: 60px;
+    height: 50px;
+    
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -22,11 +22,10 @@
 
     
     .main{
-        margin-left: 100px;
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         
         .firstbox{
             display: flex;
@@ -35,6 +34,7 @@
             padding: 15px 50px 17px 50px;
             min-height: fit-content;
             flex-direction: column;
+            justify-content: center;
             .title{
                 display: flex;
                 flex-direction: row;
@@ -42,6 +42,10 @@
                 height: fit-content;
                 align-items: center;
                 gap: 20px;
+                .helo{
+                    font-size: 25px;
+                    flex-grow: 1;
+                }
                 .tools{
                     display: flex;
                     flex-direction: row;
@@ -64,10 +68,46 @@
                         .thrd{
                             @include inbx(#0CB459);
                         }
+                        @media screen and (max-width:670px) {
+                            .thrd{
+                                height: 25px;
+                                width: 30px;
+                                background-color: transparent;
+                            }
+                        }
+                        @media screen and (max-width:670px){
+                            padding-left: 5px;
+                        }
+                    }
+                    @media screen and (max-width:670px) {
+                        .frst ,.scnd{
+                            height: 25px;
+                            width: 30px;
+                            background-color: transparent;
+                        }
+                        
+                    }
+                }
+                @media screen and (max-width:450px) {
+                    .helo{
+                        font-size: 15px;
                     }
                 }
                 
             }
+           
+            
+        }
+        @media screen and (max-width:670px){
+            .firstbox{
+                padding: 10px;
+            }
+        }
+    }
+    @media screen and (max-width:1500px){
+        .main{
+            margin-left: 0px;
+            width: 100%;
         }
     }
     
@@ -76,4 +116,10 @@
     font-weight: 700;
     color: #a8737b;
     white-space: nowrap;
+}
+@media screen and (max-width:450px) {
+    .smalltext{
+        white-space: initial;
+    }
+    
 }

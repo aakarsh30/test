@@ -1,17 +1,22 @@
+import React,{useState} from 'react';
 import Header from './components/Header';
 import './styles/App.scss';
 import Sidebar from './components/Sidebar';
 function App() {
+
   return (
     <>
       <div className='outer'>
-        <Sidebar />
+        
+        
         <div className='main' >
+        <svg className='menubtn'  fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="48px" height="48px"><path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"/></svg>
+
           <Header />
          
           <div className='firstbox'>
             <div className='title'>
-              <h2 style={{flexGrow:'1'}} >Hello Aakarsh</h2>
+              <h2 className='helo'  >Hello Aakarsh</h2>
               <div className='tools'>
                 <div className='frst' >
                   <svg style={{height:"20px"}} fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="48px" height="48px"><path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"/></svg>
@@ -32,7 +37,7 @@ function App() {
             <div className='workout'>
               <div className='schedule'>
                 <div className='upcm'>
-                  <img src='./running.png' style={{width:'200px',height:"150px",objectFit:'contain'}} />
+                  <img src='./running.png' className='run'  />
                   <h2 style={{color:"#3b4a50"}} >Upcoming Workout</h2>
                 </div>
                 <div className='next'>
@@ -52,8 +57,8 @@ function App() {
               <div className='layout'>
                 <div className='head'>
                   <div className='upcm'>
-                    <img src='./rafiki.png'style={{width:'200px',height:"150px",objectFit:'contain'}} />
-                    <h1 style={{color:"#0cb459",fontSize:'45px'}} >10</h1>
+                    <img src='./rafiki.png'className='run' />
+                    <h1 className='num' >10</h1>
                     <h2 style={{color:"#3b4a50"}} >Remainig Workout</h2>
                   </div>
                 </div>
@@ -62,7 +67,7 @@ function App() {
                     <text style={{fontSize:"20px",fontWeight:"700",color:"#3b4a50"}}>My Services</text>
                     <img src='./option.png' style={{width:"40px",height:"30px",objectFit:"contain",cursor:"pointer"}} />
                   </div>
-                  <span style={{color:"#0cb459",fontWeight:"900",fontSize:"20px",marginTop:"10px"}} >EMS Workout</span>
+                  <span style={{color:"#0cb459",fontWeight:"900",fontSize:"20px",marginTop:"10px"}} >EMS Workout </span>
                   <div className='mid'>
                     <div className='inside'>
                       <span className='smalltext' className='smalltext'>Type</span>
@@ -88,8 +93,8 @@ function App() {
               <div className='layout'>
                 <div className='head'>
                   <div className='upcm'>
-                    <img src='./amico.png'style={{width:'200px',height:"150px",objectFit:'contain'}} />
-                    <h1 style={{color:"#0cb459",fontSize:'45px'}} >5</h1>
+                    <img src='./amico.png' className='run' />
+                    <h1 className='num' >5</h1>
                     <h2 style={{color:"#3b4a50"}} >Completed Workout</h2>
                   </div>
                 </div>

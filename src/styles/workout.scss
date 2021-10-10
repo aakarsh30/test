@@ -9,11 +9,11 @@
 .workout{
     display: flex;
     padding: 5px 20px 0px 20px;
-    flex-direction: row;
     width: 100%;
     height: fit-content;
     gap: 20px;
-    justify-content: space-around;
+    flex-flow: row wrap;
+
     .schedule{
         display: flex;
         flex-direction: column;
@@ -57,6 +57,14 @@
             }
         }
     }
+    @media screen and (max-width:450px) {
+        .schedule{
+            width: 300px;
+            padding: 10px 20px;
+            gap: 5px;
+            height: fit-content;
+        }
+    }
     .layout{
         display: flex;
         flex-direction: column;
@@ -77,7 +85,7 @@
             border-radius: 10px;
             display: flex;
             flex-direction: column;
-            padding: 30px 40px 0px 40px;
+            padding: 30px 40px 10px 40px;
             gap: 10px;
             .top{
                 display: flex;
@@ -114,12 +122,43 @@
             }
         }
     }
+    @media screen and (max-width:450px) {
+        .layout{
+            width: 300px;
+            .head{
+                padding: 0px;
+                height: 130px;
+            }
+            .btm{
+                gap: 0px;
+                height: fit-content;
+            }
+        }
+    }
 }
 .upcm{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 25px;
+    .run{
+        width: 200px;
+        height: 150px;
+        object-fit: contain;
+    }
+    .num{
+        color: #0cb459;
+        font-size: 45px;
+    }
+    @media screen and (max-width:450px) {
+        .run{
+            width: 100px;
+        }
+        .num{
+            font-size: 30px;
+        }
+    }
+    
 }
 .inside{
     width: 50%;
@@ -129,4 +168,18 @@
     align-items: flex-start;
     padding: 30px 20px 0px 0px;
     
+}
+@media screen and (max-width:956px) {
+    .workout{
+        justify-content: center;
+        .schedule{
+            justify-content: center;
+
+        }
+    }
+}
+@media screen and (max-width:450px)  {
+    .workout{
+        padding: 15px 0px 0px 0px;
+    }
 }
