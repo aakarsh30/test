@@ -13,7 +13,7 @@
     height: fit-content;
     gap: 20px;
     flex-flow: row wrap;
-
+    justify-content: space-between;
     .schedule{
         display: flex;
         flex-direction: column;
